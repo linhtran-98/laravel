@@ -19,5 +19,5 @@ Route::get('/', function () {
 });
 
 Route::get('user/{id}', function ($id) {
-    dd(User::findOrFail($id);
+    dd(User::findOrFail($id));
 });
