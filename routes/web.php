@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Models\User;
+use App\Jobs\showInfo;
 
 /*
 |--------------------------------------------------------------------------
@@ -20,4 +21,8 @@ Route::get('/', function () {
 
 Route::get('user/{id}', function ($id) {
     dd(User::findOrFail($id));
+});
+
+Route::get('show-info', function () {
+    showInfo::dispatch();
 });
