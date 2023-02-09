@@ -25,4 +25,5 @@ Route::get('user/{id}', function ($id) {
 
 Route::get('show-info', function () {
     showInfo::dispatch();
+    return response()->json(['message' => 'job is starting'], 200);
 });
